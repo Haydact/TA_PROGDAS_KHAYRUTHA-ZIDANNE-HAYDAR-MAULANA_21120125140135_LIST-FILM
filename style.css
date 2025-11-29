@@ -1,0 +1,81 @@
+body {
+font-family: Arial, sans-serif;
+background: #111;
+color: #fff;
+margin: 0;
+padding: 20px;
+}
+
+
+h1 { text-align: center; }
+
+
+.container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 20px;
+padding: 20px;
+}
+
+
+.card {
+background: #222;
+padding: 15px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+
+.card img {
+width: 100%;
+height: 260px;
+object-fit: cover;
+border-radius: 10px;
+}
+
+
+.btn {
+display: inline-block;
+padding: 10px 20px;
+background: #ff4757;
+color: #fff;
+border-radius: 8px;
+text-decoration: none;
+margin-bottom: 20px;
+}
+
+
+.fav-btn {
+display: block;
+margin-top: 10px;
+padding: 8px;
+border-radius: 8px;
+background: #555;
+color: #fff;
+text-decoration: none;
+}
+
+
+.fav-btn.active {
+background: #e91e63;
+}
+
+
+.form-box {
+width: 350px;
+margin: auto;
+background: #222;
+padding: 20px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+
+input, button {
+padding: 10px;
+border-radius: 8px;
+border: none;
+}
