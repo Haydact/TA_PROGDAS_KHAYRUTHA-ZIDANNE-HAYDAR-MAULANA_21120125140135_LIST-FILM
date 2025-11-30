@@ -1,0 +1,95 @@
+[
+    {
+        "judul": "Kapsul Waktu",
+        "genre": "Animasi",
+        "tahun": "2025",
+        "poster": "1764526434-1764400018_New_00000.png",
+        "favorite": true,
+        "rating": "\u2b50\u2b50\u2b50\u2b50\u2b50",
+        "created_at": 1764529179
+    },
+    {
+        "judul": "Sore: Istri Dari Masa Depan",
+        "genre": "Drama",
+        "tahun": "2025",
+        "poster": "1764528675-1764507863_Sore_Official-Poster_IG-scaled.jpg",
+        "rating": "\u2b50\u2b50\u2b50\u2b50\u2b50",
+        "favorite": true,
+        "created_at": 1764529189
+    },
+    {
+        "judul": "Wicked: For Good",
+        "genre": "Drama",
+        "tahun": "2025",
+        "poster": "1764528848-MV5BNzRhNTE4ZTYtNTM0Mi00MzU3LTk4MTktYWE3MzQ2NTU0MDNlXkEyXkFqcGc@._V1_.jpg",
+        "rating": "\u2b50\u2b50\u2b50\u2b50",
+        "favorite": false,
+        "created_at": 1764529199
+    },
+    {
+        "judul": "1 Kakak 7 Ponakan",
+        "genre": "Drama",
+        "tahun": "2024",
+        "poster": "1764528967-Poster_1K7P.jpg",
+        "rating": "\u2b50\u2b50\u2b50\u2b50",
+        "favorite": false,
+        "created_at": 1764529209
+    },
+    {
+        "judul": "Sukma",
+        "genre": "Horror",
+        "tahun": "2025",
+        "poster": "1764529071-OFFICIAL POSTER FILM SUKMAKepindahan Arini bersama anak dan suaminya Pram, mengalami petaka yang.jpg",
+        "rating": "\u2b50\u2b50\u2b50\u2b50",
+        "favorite": false,
+        "created_at": 1764529219
+    },
+    {
+        "judul": "Agak Laen",
+        "genre": "Komedi",
+        "tahun": "2023",
+        "poster": "1764530322-Akhirnya, terbit juga OFFICIAL POSTER film AGAK LAEN. Poster yang kami buat ini menghabiskan bud.jpg",
+        "rating": "\u2b50\u2b50\u2b50\u2b50\u2b50",
+        "favorite": false
+    },
+    {
+        "judul": "Rangga & Cinta",
+        "genre": "Romance",
+        "tahun": "2025",
+        "poster": "1764530361-Official Poster - FILM RANGGA & CINTAWajah Rangga & Cinta, kembali hadir dalam balutan ragam war.jpg",
+        "rating": "\u2b50\u2b50\u2b50",
+        "favorite": false
+    },
+    {
+        "judul": "Pengepungan Di Bukit Duri",
+        "genre": "Sci-Fi",
+        "tahun": "2025",
+        "poster": "1764530420-Inilah official poster film PENGEPUNGAN DI BUKIT DURI, dari Come and See Pictures dan perusahaan.jpg",
+        "rating": "\u2b50\u2b50\u2b50\u2b50",
+        "favorite": false
+    },
+    {
+        "judul": "Home Sweet Loan",
+        "genre": "Drama",
+        "tahun": "2024",
+        "poster": "1764530448-mv5by2qxmwrmzdktyjm3oc00mtu2lwfhnwitzwfhytfhodg4nwuzxkeyxkfqcgc-at-v1-23f9213531bb51173639e8a3c28761b6.avif",
+        "rating": "\u2b50\u2b50\u2b50\u2b50\u2b50",
+        "favorite": true
+    },
+    {
+        "judul": "Teka Teki Tika",
+        "genre": "Drama",
+        "tahun": "2021",
+        "poster": "1764530506-thumbnail-18.jpg",
+        "rating": "\u2b50\u2b50\u2b50",
+        "favorite": false
+    },
+    {
+        "judul": "Ipar Adalah Maut",
+        "genre": "Drama",
+        "tahun": "2024",
+        "poster": "1764530566-Poster_IAM.jpg",
+        "rating": "\u2b50\u2b50\u2b50\u2b50",
+        "favorite": false
+    }
+]

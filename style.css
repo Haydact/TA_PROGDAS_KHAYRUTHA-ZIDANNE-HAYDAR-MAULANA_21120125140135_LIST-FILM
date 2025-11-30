@@ -1,81 +1,293 @@
-body {
-font-family: Arial, sans-serif;
-background: #111;
-color: #fff;
-margin: 0;
-padding: 20px;
+/* Soft-Dark theme */
+:root{
+    --bg: #0f0f10;
+    --panel: #161616;
+    --card: #1b1b1c;
+    --muted: #9a9a9b;
+    --accent: #ff5b73;
+}
+
+body.soft-dark{
+    margin:0;
+    background:#0c0c0d;
+    color:white;
+    font-family:"Poppins";
+}
+
+/* Header */
+.header{
+    max-width:1100px;
+    margin:40px auto 20px;
+    display:flex;
+    justify-content:space-between; /* kiri–kanan */
+    align-items:center;
+    padding:0 20px;
+}
+.header h1{
+    font-size:34px;
+    font-weight:700;
+    margin:0;
+    text-align:left;
+}
+
+/* Controls */
+.controls{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+select{
+    padding:10px 15px;
+    background:#1a1a1b;
+    color:#ccc;
+    border-radius:20px;
+    border:none;
+}
+
+/* Heart button */
+.heart-btn{
+    width:45px;height:45px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;
+    color:#ff8ea1;
+    background:#1a1a1b;
+    text-decoration:none;
+}
+.heart-btn.active{
+    background:#ff5674;
+    color:white;
+}
+
+/* Main */
+.main-wrap{
+    max-width:1100px;
+    margin:10px auto;
+    padding:0 20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); /* <= 1fr bukan 0fr */
+    gap:24px;
+    justify-content:flex-start;
+}
+
+/* Card */
+.card{
+    /* width:220px;  <-- HAPUS */
+    background:#151515;
+    padding:16px 20px;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.55);
+    text-align:center;
+}
+
+/* Poster EXACT VERTICAL */
+.poster img{
+    width:200px;
+    height:300px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+    margin:auto;
+}
+
+/* Body */
+.title{
+    margin:10px 0 5px;
+    font-size:17px;
+    font-weight:600;
+}
+.genre{
+    color:#aaa;
+    margin:2px 0;
+}
+.rating{
+    margin:6px 0;
+    color:#ffd95c;
+    font-size:16px;
+}
+
+/* Fav Button */
+.fav-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:7px 12px;
+    border-radius:8px;
+    color:#ddd;
+    text-decoration:none;
+    background:#222;
+}
+.fav-btn.active{
+    background:#ff4c70;
+    color:white;
+    font-weight:bold;
+}
+
+/* Actions */
+.actions{
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    gap:8px;
+}
+.actions a{
+    padding:6px 10px;
+    border-radius:8px;
+    font-size:13px;
+    text-decoration:none;
+    color:white;
+}
+.edit{ background:#2f8bff33; }
+.del{ background:#ff3d3d33; }
+
+/* Floating Add Button */
+.fab{
+    position:fixed;
+    right:40px;
+    bottom:40px;
+    width:70px;height:70px;
+    border-radius:50%;
+    background:#ff5674;
+    font-size:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-decoration:none;
+}
+
+.add-container{
+    max-width:500px;
+    margin:80px auto;
+    padding:40px;
+    background:#161616;
+    border-radius:15px;
+    box-shadow:0 0 30px rgba(0,0,0,0.4);
 }
 
 
-h1 { text-align: center; }
+.add-container h2{
+    margin:0 0 px;
+    text-align:center;
+    font-size:25px;
+    font-weight:700;
+}
 
+.add-container label{
+    font-size:15px;
+    color:#ddd;
+}
 
-.container {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-gap: 20px;
-padding: 20px;
+/* Container form */
+.add-container{
+    max-width:700px;
+    margin:60px auto;
+    padding:40px 50px;
+    background:#161616;
+    border-radius:24px;
+    box-shadow:0 0 40px rgba(0,0,0,0.6);
+}
+
+.add-container h2{
+    margin:0 0 28px;
+    text-align:center;
+    font-size:28px;
+    font-weight:700;
+}
+
+/* Bungkus tiap field */
+.add-container .form-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+/* Label rapi */
+.add-container label{
+    font-size:15px;
+    margin-bottom:6px;
+    color:#e6e6e6;
+}
+
+/* Input / select / textarea */
+.add-container input,
+.add-container select,
+.add-container textarea{
+    width:100%;
+    padding:12px 14px;          /* kiri-kanan ada ruang */
+    border-radius:10px;
+    border:none;
+    outline:none;
+    margin:0;                   /* margin diatur lewat .form-group */
+    background:#1c1c1d;
+    color:rgb(117, 117, 117);
+    font-size:14px;
+    box-sizing:border-box;
+}
+
+/* Biar ada efek fokus */
+.add-container input:focus,
+.add-container select:focus,
+.add-container textarea:focus{
+    box-shadow:0 0 0 2px #ff5674;
+}
+
+/* Input file – biar tinggi pas */
+.add-container input[type="file"]{
+    padding:8px 0;
+}
+
+/* Tombol */
+.add-container button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#ff5674;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:10px;
 }
 
 
-.card {
-background: #222;
-padding: 15px;
-border-radius: 10px;
-text-align: center;
-box-shadow: 0 0 10px rgba(255,255,255,0.1);
+.add-container button:hover{
+    opacity:0.85;
+
 }
 
-
-.card img {
-width: 100%;
-height: 260px;
-object-fit: cover;
-border-radius: 10px;
+/* Card favorite – beri highlight khusus */
+.card.favorite{
+    border:2px solid #ff5674;
+    box-shadow:0 0 20px rgba(255,86,116,0.4);
 }
 
-
-.btn {
-display: inline-block;
-padding: 10px 20px;
-background: #ff4757;
-color: #fff;
-border-radius: 8px;
-text-decoration: none;
-margin-bottom: 20px;
+/* Tombol favorite versi “hati” di halaman index */
+.fav-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    margin-top:10px;
+    padding:7px 16px;
+    border-radius:999px;
+    color:#ff9fb3;
+    text-decoration:none;
+    background:#222;
+    font-size:13px;
 }
-
-
-.fav-btn {
-display: block;
-margin-top: 10px;
-padding: 8px;
-border-radius: 8px;
-background: #555;
-color: #fff;
-text-decoration: none;
-}
-
-
-.fav-btn.active {
-background: #e91e63;
-}
-
-
-.form-box {
-width: 350px;
-margin: auto;
-background: #222;
-padding: 20px;
-border-radius: 10px;
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-
-
-input, button {
-padding: 10px;
-border-radius: 8px;
-border: none;
+.fav-btn.active{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    margin-top:10px;
+    padding:7px 16px;
+    border-radius:999px;
+    background:#ff5674;
+    color:white;
+    font-weight:600;
 }

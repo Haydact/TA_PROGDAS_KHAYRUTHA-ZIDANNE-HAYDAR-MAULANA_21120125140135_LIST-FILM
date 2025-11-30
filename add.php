@@ -1,48 +1,115 @@
 <?php
-require "Film.php";
-session_start();
+// add.php
 
-// Jika POST → PROSES DATA
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $judul = $_POST["judul"];
-    $genre = $_POST["genre"];
+    $judul = $_POST['judul'] ?? '';
+    $genre = $_POST['genre'] ?? '';
+    $tahun = $_POST['tahun'] ?? '';
+    $rating = $_POST['rating'] ?? '⭐';   // ambil rating dari form, default ⭐
+
+    // Validasi sederhana
+    if ($judul === '' || $genre === '' || $tahun === '' || $rating === '') {
+        die("Form belum lengkap. <a href='add.php'>Kembali</a>");
+    }
+
+    // Pastikan db.json ada
+    if (!file_exists("db.json")) {
+        file_put_contents("db.json", "[]");
+    }
 
     // Upload poster
-    $posterName = time() . "_" . basename($_FILES["poster"]["name"]);
-    $target = "uploads/" . $posterName;
+    $filename = '';
+    if (!empty($_FILES['poster']['name'])) {
+        if (!is_dir("uploads")) {
+            mkdir("uploads", 0755, true);
+        }
 
-    move_uploaded_file($_FILES["poster"]["tmp_name"], $target);
+        $file = $_FILES['poster'];
+        $filename = time() . "-" . basename($file['name']);
+        move_uploaded_file($file['tmp_name'], "uploads/" . $filename);
+    }
 
-    // Buat objek film baru
-    $film = new Film($judul, $genre, $posterName);
+    // Baca data lama
+    $data = json_decode(file_get_contents("db.json"), true);
+    if (!is_array($data)) {
+        $data = [];
+    }
 
-    // Simpan ke session
-    $_SESSION["films"][] = $film;
+    // Tambah film baru
+    $data[] = [
+        "judul"    => $judul,
+        "genre"    => $genre,
+        "tahun"    => $tahun,
+        "poster"   => $filename,
+        "rating"   => $rating,  // <-- pakai rating dari form
+        "favorite" => false
+    ];
+
+    // Simpan balik
+    file_put_contents("db.json", json_encode($data, JSON_PRETTY_PRINT));
 
     header("Location: index.php");
     exit;
 }
-
-// Jika GET → TAMPILKAN FORM
 ?>
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Tambah Film</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?= time() ?>">
 </head>
-<body>
+<body class="soft-dark">
 
-<h1>Tambah Film Baru</h1>
+<div class="add-container">
+    <h2>Tambah Film</h2>
 
-<form class="form-box" action="add.php" method="POST" enctype="multipart/form-data">
-    <input type="text" name="judul" placeholder="Judul Film" required>
-    <input type="text" name="genre" placeholder="Genre" required>
-    <input type="file" name="poster" required>
-    <button type="submit">Tambah Film</button>
-</form>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Judul</label>
+            <input type="text" name="judul" required>
+        </div>
+
+        <div class="form-group">
+            <label>Genre</label>
+            <select name="genre" required>
+                <option value="">-- Pilih Genre --</option>
+                <option value="Action">Action</option>
+                <option value="Drama">Drama</option>
+                <option value="Komedi">Komedi</option>
+                <option value="Animasi">Animasi</option>
+                <option value="Romance">Romance</option>
+                <option value="Horror">Horror</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Tahun</label>
+            <input type="number" name="tahun" required>
+        </div>
+
+        <!-- FIELD RATING BARU -->
+        <div class="form-group">
+            <label>Rating</label>
+            <select name="rating" required>
+                <option value="">-- Pilih Rating --</option>
+                <option value="⭐">⭐</option>
+                <option value="⭐⭐">⭐⭐</option>
+                <option value="⭐⭐⭐">⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Poster</label>
+            <input type="file" name="poster" required>
+        </div>
+
+        <button type="submit">Tambah</button>
+    </form>
+</div>
 
 </body>
 </html>
