@@ -50,7 +50,8 @@
         "tahun": "2023",
         "poster": "1764530322-Akhirnya, terbit juga OFFICIAL POSTER film AGAK LAEN. Poster yang kami buat ini menghabiskan bud.jpg",
         "rating": "\u2b50\u2b50\u2b50\u2b50\u2b50",
-        "favorite": false
+        "favorite": false,
+        "created_at": 1764575548
     },
     {
         "judul": "Rangga & Cinta",
@@ -58,7 +59,8 @@
         "tahun": "2025",
         "poster": "1764530361-Official Poster - FILM RANGGA & CINTAWajah Rangga & Cinta, kembali hadir dalam balutan ragam war.jpg",
         "rating": "\u2b50\u2b50\u2b50",
-        "favorite": false
+        "favorite": false,
+        "created_at": 1764575558
     },
     {
         "judul": "Pengepungan Di Bukit Duri",
@@ -66,7 +68,8 @@
         "tahun": "2025",
         "poster": "1764530420-Inilah official poster film PENGEPUNGAN DI BUKIT DURI, dari Come and See Pictures dan perusahaan.jpg",
         "rating": "\u2b50\u2b50\u2b50\u2b50",
-        "favorite": false
+        "favorite": false,
+        "created_at": 1764575568
     },
     {
         "judul": "Home Sweet Loan",
@@ -74,7 +77,8 @@
         "tahun": "2024",
         "poster": "1764530448-mv5by2qxmwrmzdktyjm3oc00mtu2lwfhnwitzwfhytfhodg4nwuzxkeyxkfqcgc-at-v1-23f9213531bb51173639e8a3c28761b6.avif",
         "rating": "\u2b50\u2b50\u2b50\u2b50\u2b50",
-        "favorite": true
+        "favorite": true,
+        "created_at": 1764575578
     },
     {
         "judul": "Teka Teki Tika",
@@ -82,7 +86,8 @@
         "tahun": "2021",
         "poster": "1764530506-thumbnail-18.jpg",
         "rating": "\u2b50\u2b50\u2b50",
-        "favorite": false
+        "favorite": false,
+        "created_at": 1764575588
     },
     {
         "judul": "Ipar Adalah Maut",
@@ -90,6 +95,7 @@
         "tahun": "2024",
         "poster": "1764530566-Poster_IAM.jpg",
         "rating": "\u2b50\u2b50\u2b50\u2b50",
-        "favorite": false
+        "favorite": false,
+        "created_at": 1764575598
     }
 ]
