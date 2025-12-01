@@ -97,5 +97,14 @@
         "rating": "\u2b50\u2b50\u2b50\u2b50",
         "favorite": false,
         "created_at": 1764575598
+    },
+    {
+        "judul": "Harry Potter Half Blood Prince",
+        "genre": "Sci-Fi",
+        "tahun": "2009",
+        "poster": "1764576148-68631ad725436f8361d7682b_1125186618_WB0003-5.avif",
+        "rating": "\u2b50\u2b50\u2b50\u2b50",
+        "favorite": false,
+        "created_at": 1764576138
     }
 ]
